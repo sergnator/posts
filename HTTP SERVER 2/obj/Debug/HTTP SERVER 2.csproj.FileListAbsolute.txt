@@ -1,0 +1,11 @@
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\bin\Debug\HTTP SERVER 2.exe.config
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\bin\Debug\HTTP SERVER 2.exe
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\bin\Debug\HTTP SERVER 2.pdb
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\obj\Debug\HTTP SERVER 2.csproj.AssemblyReference.cache
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\obj\Debug\HTTP SERVER 2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\obj\Debug\HTTP SERVER 2.csproj.CoreCompileInputs.cache
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\obj\Debug\HTTP SERVER 2.exe
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\obj\Debug\HTTP SERVER 2.pdb
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Александр\source\repos\HTTP SERVER 2\HTTP SERVER 2\obj\Debug\HTTP SERVER 2.csproj.CopyComplete

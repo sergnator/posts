@@ -1,0 +1,218 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Новый Пост</title>
+</head>
+<script>
+    if(!document.cookie.includes("id=")){
+        document.location('login')
+    }
+    const postData = async (url = '', data) => {
+    // Формируем запрос
+    const response = await fetch(url, {
+      method: 'POST',
+     
+      headers: {
+        'Content-Type': 'text'
+      },
+      body: data
+    });
+    return response.text()
+}
+postData('username', document.cookie.split('=')[1]).then((data) => {
+    document.getElementById('name').textContent = data
+    document.getElementById('UserAccNameHead').textContent = data
+});
+
+    function send(){
+        json ={postname: document.getElementById('postname').value, content: document.getElementById('content').value, athour: document.getElementById('name').textContent}
+        postData('createPost', JSON.stringify(json))
+        document.location.href = 'main'
+    }
+</script>
+<body>
+    <header>
+        <div id="logo">
+            <span>BArbossik Posts</span>
+        </div>
+        <div id="about">
+            <a href="main">Главная</a>
+            <a href="feedBack">Обратная связь</a>
+            <a href="exit" , id="exit">Выход</a>
+            <a id="UserAccNameHead">Сергей</a>
+        </div>
+
+    </header>
+    <br>
+    <form class="form">
+        <br>
+      <input placeholder="Название" type="text" id="postname"> <br>
+      <label id="name">автор</label> <br>
+      <textarea placeholder="текст поста" id="content" cols="30" rows="10"></textarea>
+
+
+    </form>
+        <Button onclick="send()">отправить</Button>
+    <style>
+       * {
+      margin: 0;
+      padding: 0;
+      outline: none;
+    }
+    
+    body, html {
+      width: 100%;
+      height: 100%;
+    }
+    
+    body {
+      background-color: #fafafa;
+      font-family: Trebuchet MS, Helvetica;
+    }
+    
+    /* Шапка сайта */
+    
+    header {
+      width: 100%;
+      padding: 10px 0.5% 0px 0.5%;
+      background: transparent;
+      float: left;
+      background: black;
+      margin-bottom: 1%;
+    }
+    
+    header #logo {
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    header #logo span {
+      font-size: 1.7em;
+      line-height: 45px;
+      margin-left: 40px;
+      font-family: 'Suez One', serif;
+    }
+    
+    @media (min-width: 701px) {
+      #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+      }
+    
+      #about {
+        float: right;
+        width: 67%;
+      }
+    }
+    
+    @media (max-width: 700px) {
+      #logo {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+      }
+    
+      #about {
+        float: left;
+        width: 100%;
+      }
+    }
+    
+    #about {
+      text-align: center;
+      font-size: 1em;
+      line-height: 40px;
+      margin-bottom: 10px;
+    }
+    
+    #about > a {color: #fff; text-decoration: none; 
+    font-size: 25px;
+    
+    }
+    
+    #about > a:hover {
+      color: #b0b0b0;
+      text-decoration: underline;
+    }
+    #exit:hover {
+        color: #ff0000 !important;
+        text-decoration: none !important;
+    }
+    
+    #UserAccNameHead {
+      color: #ffffff !important;
+    }
+    #UserAccNameHead:hover {
+      text-decoration: none !important;
+      color: #ffffff !important;
+    }
+    
+    #about > a:not(:last-child) {
+      margin-right: 7%;
+    }
+    /* стиль формы */
+    form  {
+        width: 20%;
+        height: 30%;
+        border: #000000 1px solid;
+        text-align: center;
+        margin-top: 10%;
+        margin-left: 40%;
+        border: #000000 solid 3px;
+        border-radius: 20px;
+        font-size:20px;
+        font-weight:bold;
+        background-color: #fff3f3;
+    }
+    
+    input {
+        font-size:30px;
+        font-weight:bold;
+        background-color: #fff3f3;
+        border: none;
+    }
+    textarea {
+        font-size:20px;
+        font-weight:bold;
+        margin-top: 10%;
+        border: 2px black dashed;
+        border-radius: 10px;
+        width: 90%;
+        background-color: #fff3f3;
+    }
+    label{
+        
+        font-size: 20px;
+        text-align: right;
+        margin-top: 3%;
+    }
+    button {
+        margin-top: 1%;
+        margin-left: 45%;
+        font-size:50px;
+        font-weight:bold;
+        background-color: #fafafa;
+        border: #7b7b7b 1px solid;
+        border-radius: 10px;
+        
+    }
+    button:hover{
+        border: #000000 1px solid;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+
+
+    </style>
+   
+</body>
+
+</html>
